@@ -56,7 +56,7 @@ from blog import *
 app.register_blueprint(bp, url_prefix="/blog")
 
 @app.route('/contact', methods=['GET', 'POST'])
-def connect():
+def contact():
     if request.method == 'POST':
         fmt = "My name is: \n%s\n\nMy email is: \n%s\n\nMy phone number is: \n%s\n\nAnd I want to say: \n%s\n" % (
                             request.form['name'],

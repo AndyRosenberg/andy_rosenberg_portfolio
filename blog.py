@@ -3,10 +3,12 @@ from app import *
 
 bp = Blueprint('blog', __name__)
 
-@bp.route('/', methods=['GET'])
+@bp.route('/index', methods=['GET'])
 def index():
     cursor = Blog.select().order_by(Blog.created_date.desc())
     return render_template('index.html', cursor=cursor)
+
+bp.add_url_rule('/', 'index', index)
 
 @bp.route('/auth', methods=['GET', 'POST'])
 def authenticate():

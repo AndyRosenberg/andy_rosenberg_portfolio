@@ -1,7 +1,7 @@
 from app import *
+from urlparse import urlparse
 
 if 'HEROKU' in os.environ:
-    import urlparse
     urlparse.uses_netloc.append('postgres')
     url = urlparse.urlparse(os.environ["DATABASE_URL"])
     pg_db = PostgresqlDatabase(database=url.path[1:], user=url.username, password=url.password, host=url.hostname, port=url.port)

@@ -41,7 +41,8 @@ CREATE TABLE public.blog (
     id integer NOT NULL,
     title text NOT NULL,
     body text NOT NULL,
-    created_date timestamp without time zone NOT NULL
+    created_date timestamp without time zone NOT NULL,
+    image text
 );
 
 
@@ -74,6 +75,23 @@ ALTER SEQUENCE public.blog_id_seq OWNED BY public.blog.id;
 --
 
 ALTER TABLE ONLY public.blog ALTER COLUMN id SET DEFAULT nextval('public.blog_id_seq'::regclass);
+
+
+--
+-- Data for Name: blog; Type: TABLE DATA; Schema: public; Owner: root
+--
+
+COPY public.blog (id, title, body, created_date, image) FROM stdin;
+1	The first blog	Here it is.	2018-10-05 16:57:44.007571	\N
+2	The first blog	Here it is.	2018-10-05 16:59:51.223991	\N
+\.
+
+
+--
+-- Name: blog_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
+--
+
+SELECT pg_catalog.setval('public.blog_id_seq', 2, true);
 
 
 --

@@ -7,7 +7,7 @@
       <figure>
         <h3>{{ desc['name'] }}</h3>
         {% for img in desc['images'] %}
-          <img src="{{ img }}" />
+          <img src="{{ url_for('static', filename=img) }}" />
         {% endfor %}
         <figcaption>
           {{ desc['description'] }}<br><br>

@@ -24,8 +24,8 @@ app.config.update(mail_settings)
 mail = Mail(app)
 
 def yaml_it(file):
-    path = os.path.join(my_path, file)
-    with open(file) as stream:
+    path = os.path.join(my_path, "data/%s" % file)
+    with open(path) as stream:
         return yaml.load(stream)
 
 @app.before_request
@@ -39,7 +39,7 @@ def _db_close(exc):
 
 @app.route('/', methods=['GET'])
 def home():
-    pics_orig = yaml_it("apps.yaml")
+    pics_orig = yaml_it("pics.yaml")
     pics = json.dumps(pics_orig)
     return render_template('home.html', pics=pics, pics_orig=pics_orig)
 

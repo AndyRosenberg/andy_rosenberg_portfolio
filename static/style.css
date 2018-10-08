@@ -233,3 +233,7 @@ section#main.contact {
 #resume {
   padding: 1rem .6rem;
 }
+
+.space {
+  line-height: .5rem;
+}

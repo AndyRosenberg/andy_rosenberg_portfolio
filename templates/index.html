@@ -10,8 +10,14 @@
           {% if blog and blog['image'] %}
               <img src="{{ blog['image'] }}" />
           {% endif %}
-          <p><em>Posted on {{ blog['created_date'].strftime('%d-%m-%Y at %-I:%M%p').lower() }}</em></p>
-          <p class="bpost-body">{{ blog['body'] }}</p>
+          <p><em>Posted on {{ blog['created_date'].strftime('%m-%d-%Y at %-I:%M%p').lower() }}</em></p>
+          <p class="bpost-body">
+            <div class="space">&nbsp;</div>
+            {% for par in blog['body'].split("\n\n") %}
+              <div>{{ par }}</div>
+              <div class="space">&nbsp;</div>
+            {% endfor %}
+          </p>
         </div>
       </article>
     {% endfor %}

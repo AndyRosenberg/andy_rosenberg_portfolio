@@ -1,5 +1,5 @@
 from app import *
-from urlparse import urlparse
+from urllib.parse import urlparse
 
 if 'HEROKU' in os.environ:
     urlparse.uses_netloc.append('postgres')

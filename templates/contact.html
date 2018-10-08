@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section id="main" class="contact">
+    <h1 id="title-block">Contact Me:</h1>
+    <form action="/contact" method="post" id="contact-form">
+        <dl>
+          <dt><label for="name">Name:</label></dt>
+          <dd><input name="name" id="name" placeholder="Full Name" required /></dd>
+
+          <dt><label for="email">Email:</label></dt>
+          <dd><input name="email" id="email" type="email" placeholder="Email Address" required /></dd>
+
+          <dt><label for="phone">Phone (optional):</label></dt>
+          <dd><input name="phone" id="phone" type="phone" placeholder="Phone Number" /></dd>
+
+          <dt><label for="body">What do you want to say?</label></dt>
+          <dd>
+            <textarea name="body" id="body" rows="8" placeholder="Speak your mind..." required></textarea>
+          </dd>
+      </dl>
+      <button type="submit">Send Email</button>
+    </form>
+  </section>
+{% endblock %}

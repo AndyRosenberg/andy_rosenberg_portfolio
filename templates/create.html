@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form action="/blog/create" method="post">
+      <dl>
+        <dt><label for="title">Title</label></dt>
+        <dd><input name="title" id="title" placeholder="Title" required /></dd>
+        <dt><label for="body">Body</label></dt>
+        <dd>
+          <textarea name="body" id="body" rows="20" cols="120" maxlength="800" placeholder="Speak your mind..." required></textarea>
+        </dd>
+        <dt><label for="image">Image Link</label></dt>
+        <dd><input name="image" id="image" placeholder="Paste URL Here" /></dd>
+    </dl>
+    <button type="submit">Create Post</button>
+  </form>
+{% endblock %}

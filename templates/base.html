@@ -1,0 +1,25 @@
+<!doctype html>
+<title>Andy Rosenberg's Portfolio</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='whitespace-reset.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<nav id="header">
+  <a href="/"><h1 id="main-title">Andy Rosenberg</h1></a>
+  <ul id="navigation">
+    <a href="/"><li id="home">Home</li></a>
+    <a href="/apps"><li id="apps">Apps</li></a>
+    <a href="/blog"><li id="blog">Blog</li></a>
+    <a href="/about"><li id="about">About</li></a>
+    <a href="/contact"><li id="contact">Contact</li></a>
+  </ul>
+</nav>
+<section class="content" id="main">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>

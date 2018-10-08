@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <article id="pics" data-pics="{{ pics }}" data-idx=0>
+    <h1 id="title-block">Latest Features:</h1>
+    <a id="previous" class="arrow-link">&lt;</a><a id="next" class="arrow-link">&gt;</a>
+    <figure id="current-image">
+      <a id="pic-site" href="{{ pics_orig[0]['site'] }}" target="_blank"><image id="pic-image" src="{{ pics_orig[0]['image'] }}" /></a>
+      <h3 id="pic-name">{{ pics_orig[0]['name'] }}</h3>
+      <figcaption><span id="pic-description">{{ pics_orig[0]['description'] }}</span><br>
+        <a id="pic-link" href="{{ pics_orig[0]['link'] }}">Read More</a>
+      </figcaption>
+    </figure>
+  </article>
+{% endblock %}

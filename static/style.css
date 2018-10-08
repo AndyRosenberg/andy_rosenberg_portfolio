@@ -1,0 +1,235 @@
+body {
+  background: #CFEDD3;
+  color: #49544B;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+nav#header {
+  display: block;
+  background: rgba(140, 161, 143, .8);
+  min-height: 7rem;
+  margin: .05rem auto;
+  padding: 0 1.5rem;
+  border-radius: .02rem;
+  box-shadow: 2px 2px 2px rgba(73, 84, 75, 0.5), -.5px -.5px 2px rgba(73, 84, 75, 0.5);
+}
+
+nav#header::after {
+  clear: both;
+}
+
+#main-title {
+  display: inline-block;
+  float: left;
+  font-size: 4.5rem;
+  text-align: center;
+  color: rgba(63, 110, 69, .8);
+  text-shadow: 0px 1px 2px rgba(73, 84, 75, .15);
+}
+
+#title-block {
+  font-size: 2.75rem;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  margin-top: .5rem;
+}
+
+#navigation{
+  text-align: center;
+  display: inline-block;
+  float: right;
+  font-size: X-large;
+  margin: 1.9rem 0;
+}
+
+#navigation li {
+  display: inline-block;
+  color: rgba(73, 84, 75, .8);
+  list-style-type: none;
+  margin: .75rem 1.25rem;
+  text-decoration: none;
+  text-shadow: -.005px 0 #3F6E45, 0 .005px #3F6E45, .005px 0 #3F6E45, 0 -.005px #3F6E45;
+  font-size: 1.5rem;
+}
+
+#navigation li.header-active, #pic-link, .arrow-link {
+  color: rgba(92, 161, 101, .99);
+  text-shadow: 0px 1px 2px rgba(73, 84, 75, .15);
+}
+
+#navigation li:hover, #navigation li:active, #pic-link:hover, .arrow-link:hover, #pic-link:active, .arrow-link:active {
+  color: #CFEDD3;
+}
+
+section#main {
+  background: rgba(92, 161, 101, 0.45);
+  border-radius: .02rem;
+  box-shadow: 2px 2px 2px rgba(73, 84, 75, 0.5), -.5px -.5px 2px rgba(73, 84, 75, 0.5);
+  padding-top: .5rem;
+  min-height: 95%;
+  min-height: 95vh;
+  padding-bottom: 1.5rem;
+}
+
+#pics figure, .desc figure {
+  width: 53rem;
+  margin: 0 auto;
+  display: block;
+  padding-top: 1rem;
+}
+
+#pics img, .desc img {
+  width: 53rem;
+  opacity: .7;
+  border: .5px solid rgba(73, 84, 75, 0.5);
+  border-radius: .02rem;
+}
+
+.desc img {
+  opacity: 1;
+}
+
+#pics img:hover {
+  opacity: 1;
+}
+
+.desc {
+  padding-bottom: 1rem;
+  margin: 1rem auto;
+  background: rgba(18, 58, 41, 0.2);
+  max-width: 65rem;
+  border-radius: 1rem;
+}
+
+.desc .app-link {
+  color: #3A0800;
+}
+
+.app-link:hover {
+  color: #CFEDD3;
+}
+
+#pics figure * {
+  text-align: right;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: .25rem;
+}
+
+#pics figure h3 {
+  font-size: 2rem;
+}
+
+#previous, #next {
+  display: inline;
+  position: relative;
+  font-size: 4.8rem;
+  top: 12.5rem;
+}
+
+#previous {
+  float: left;
+  left: 6.75rem;
+}
+
+#next {
+  float: right;
+  right: 6.75rem;
+}
+
+#pics {
+  background: rgba(196, 224, 199, 0.5);
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  border-radius: .5rem;
+}
+
+#contact-form {
+  width: 60rem;
+  margin: 0 auto;
+  min-height: 80%;
+  min-height: 80vh;
+}
+
+#contact-form label {
+  font-size: 1.5rem;
+}
+
+#contact-form input, #contact-form textarea {
+  font-size: 1.25rem;
+  border-radius: .15rem;
+  min-width: 58rem;
+  padding: .15rem;
+  outline: none;
+  border-style: none;
+  font-family: inherit;
+}
+
+#contact-form * {
+  margin: .15rem;
+}
+
+#contact-form button {
+  width: 7.5rem;
+  height: 2.75rem;
+  margin: 1.25% 0;
+  display: inline-block;
+  padding: .5% 0;
+  border-radius: 10px;
+  font: inherit;
+  outline: none;
+  border: none;
+  font-size: 1.25rem;
+  margin-left: .15rem;
+  background: rgba(140, 161, 143, .);
+  color: rgba(63, 110, 69, .8);
+}
+
+#contact-form button:hover, #contact-form button:active {
+  color: #CFEDD3;
+  background: rgba(140, 161, 143, .4);
+}
+
+#contact-form dt {
+  margin-top: .5rem;
+}
+
+#contact-form dt:first-of-type {
+  margin-top: 0;
+}
+
+section#main.blog {
+  width: 60rem;
+  margin: .5rem auto;
+}
+
+section#main.contact {
+  width: 70rem;
+  margin: .5rem auto;
+}
+
+.blog .desc {
+  padding-top: 1rem;
+}
+
+.bpost {
+  background: #CFEDD3;
+  color: #222222;
+  max-width: 90%;
+  margin: 0 auto;
+  border-radius: .5rem;
+  padding: .5rem;
+}
+
+.bpost-body {
+  margin-top: .5rem;
+}
+
+#resume {
+  padding: 1rem .6rem;
+}

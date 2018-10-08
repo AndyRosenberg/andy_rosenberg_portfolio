@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 id="title-block">Active Projects:</h1>
+  {% for desc in descriptions %}
+    <article id="{{ desc['id'] }}" class="desc">
+      <figure>
+        <h3>{{ desc['name'] }}</h3>
+        {% for img in desc['images'] %}
+          <img src="{{ img }}" />
+        {% endfor %}
+        <figcaption>
+          {{ desc['description'] }}<br><br>
+          Stack: {{ desc['stack'] }}<br>
+          Addons: {{ desc['addons'] }}
+        </figcaption>
+        Links:
+        <a href="{{ desc['visit'] }}" class="app-link">Production</a>
+        <a href="{{ desc['source'] }}" class="app-link">Source</a>
+      </figure>
+    </article>
+  {% endfor %}
+{% endblock %}

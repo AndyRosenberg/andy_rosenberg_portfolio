@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section id="main" class="contact">
+    <h1 id="title-block">Check out my resume:</h1>
+    <div id="resume">
+      <object data="{{ url_for('static', filename='Andy_Rosenberg_Resume.pdf') }}" type="application/pdf" width="1100" height="1200px">
+        <embed src="{{ url_for('static', filename='Andy_Rosenberg_Resume.pdf') }}" type="application/pdf">
+            <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
+        </embed>
+      </object>
+    </div>
+  </section>
+{% endblock %}

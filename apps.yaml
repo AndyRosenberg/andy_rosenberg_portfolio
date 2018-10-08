@@ -1,0 +1,12 @@
+-
+  'name': 'Lineup Jackal'
+  'image': '/static/Lineup Jackal.png'
+  'description': 'A leagueless fantasy football interface.'
+  'link': '/apps#lineupjackal'
+  'site': 'https://www.lineupjackal.com'
+-
+  'name': 'Po-it'
+  'image': '/static/Po-it.png'
+  'description': 'An anonymous poetry social network.'
+  'link': '/apps#poit'
+  'site': 'https://www.po-it.com'

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form action="/blog/auth" method="post">
+    <h3>Log In:</h3>
+    <dl>
+      <dt>
+        <label for="password">Password:</label>
+      </dt>
+      <dd>
+        <input type="password" name="password" id="password" placeholder="Password">
+      </dd>
+    </dl>
+
+      <button type="submit">Authenticate</button>
+  </form>
+{% endblock %}

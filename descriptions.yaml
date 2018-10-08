@@ -1,0 +1,30 @@
+-
+  'id': 'lineupjackal'
+  'name': 'Lineup Jackal'
+  'images':
+    - '/static/Lineup Jackal.png'
+  'description': 'Lineup Jackal allows fantasy football players to check stats and test out new lineups to prepare for drafts, trades, etc., without the constraints of a league.'
+  'stack': 'Rails, PostgreSQL, Sidekiq, jQuery, Bootstrap'
+  'addons': 'Simple Scheduler, FantasyFootballNerd API Wrapper, Scrapetastic'
+  'visit': 'https://www.lineupjackal.com'
+  'source': 'https://github.com/AndyRosenberg/Lineup_Jackal'
+-
+  'id': 'poit'
+  'name': 'Po-it'
+  'images': 
+    - '/static/Po-it.png'
+  'description': 'Po-it is a minimalist, live social network for anonymous poetry. Post anything anonymously or follow other users based on their words alone.'
+  'stack': 'Sinatra, Ruby, PostgreSQL, jQuery, HTML, CSS'
+  'addons': "Andy's Convenience Methods, ActiveSupport, Pony, Dalli"
+  'visit': 'https://www.po-it.com'
+  'source': 'https://github.com/AndyRosenberg/po_it'
+-
+  'id': 'andyconv'
+  'name': "Andy's Convenience Methods"
+  'images': 
+    - '/static/andyconv.png'
+  'description': 'A few addons to Ruby classes. This includes new operators, web development helpers, and type conversion tools.'
+  'stack': 'Ruby'
+  'addons': 'None'
+  'visit': 'https://rubygems.org/gems/andys_convenience_methods'
+  'source': 'https://github.com/AndyRosenberg/andy_conv'

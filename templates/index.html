@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section id="main" class="blog">
+    <h1 id="title-block">The Code Poet:</h1>
+    {% for blog in cursor %}
+      <article class="desc">
+        <div class="bpost">
+          <h3>{{ blog['title'] }}</h3>
+          {% if blog and blog['image'] %}
+              <img src="{{ blog['image'] }}" />
+          {% endif %}
+          <p><em>Posted on {{ blog['created_date'].strftime('%d-%m-%Y at %-I:%M%p').lower() }}</em></p>
+          <p class="bpost-body">{{ blog['body'] }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
+{% endblock %}

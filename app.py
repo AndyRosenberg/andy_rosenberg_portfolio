@@ -19,6 +19,7 @@ mail_settings = {
 
 my_path = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
+from cache import *
 app.secret_key=os.environ['PORTFOLIO_SECRET']
 app.config.update(mail_settings)
 mail = Mail(app)

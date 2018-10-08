@@ -67,13 +67,12 @@ def contact():
                                     body=fmt)
 
         mail.send(msg)
-        # add flash message
         return redirect('/contact')
     else:
         return render_template('contact.html')
 
-#from blog import *
-#app.register_blueprint(bp, url_prefix="/blog")
+from blog import *
+app.register_blueprint(bp, url_prefix="/blog")
 
 if __name__ == '__main__':
     app.run()

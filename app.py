@@ -52,9 +52,6 @@ def apps():
     descriptions = yaml_it("descriptions.yaml")
     return render_template('apps.html', descriptions=descriptions)
 
-from blog import *
-app.register_blueprint(bp, url_prefix="/blog")
-
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
@@ -74,6 +71,9 @@ def contact():
         return redirect('/contact')
     else:
         return render_template('contact.html')
+
+from blog import *
+app.register_blueprint(bp, url_prefix="/blog")
 
 if __name__ == '__main__':
     app.run()

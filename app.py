@@ -45,15 +45,18 @@ def home():
     return render_template('home.html', pics=pics, pics_orig=pics_orig)
 
 @app.route('/about', methods=['GET'])
+@cache.cached()
 def about():
     return render_template('about.html')
 
 @app.route('/apps', methods=['GET'])
+@cache.cached()
 def apps():
     descriptions = yaml_it("descriptions.yaml")
     return render_template('apps.html', descriptions=descriptions)
 
 @app.route('/contact', methods=['GET', 'POST'])
+@cache.cached()
 def contact():
     if request.method == 'POST':
         fmt = "My name is: \n%s\n\nMy email is: \n%s\n\nMy phone number is: \n%s\n\nAnd I want to say: \n%s\n" % (

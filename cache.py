@@ -1,5 +1,6 @@
+import os
 from flask_caching import Cache
-from app import *
+from app import app
 
 cache = Cache()
 

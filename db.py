@@ -1,4 +1,7 @@
-from app import *
+import os
+import psycopg2
+import datetime
+from peewee import *
 
 if 'HEROKU' in os.environ:
     pg_db = PostgresqlDatabase(os.environ['PG_DBNAME'], user=os.environ['PG_DBUSER'], password=os.environ['PG_DBPW'],

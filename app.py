@@ -1,11 +1,8 @@
 import os
 import json
-import datetime
-import psycopg2
 import yaml
 from flask import Flask, render_template, redirect, session
-from peewee import *
-from db import *
+from db import pg_db, BaseModel, Blog
 from flask_mail import Mail, Message
 
 mail_settings = {

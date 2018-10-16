@@ -80,22 +80,22 @@ $(function() {
 
   $('#previous').click(function(e) {
     e.stopPropagation();
+    timer();
     if (idx - 1 < 0) {
       nd();
     } else {
       previous();
     }
-    timer();
   });
 
   $('#next').click(function(e) {
     e.stopPropagation();
+    timer();
     if (idx + 1 === pics.length) {
       beginning();
     } else {
       next();
     }
-    timer();
   });
 
   timer();

@@ -1,6 +1,14 @@
 var pics;
 var idx;
 
+var interval;
+var timer = function(){
+  if (interval) { clearInterval(interval) }
+  interval = setInterval(function(){
+    $('#next').trigger('click');
+  }, 6000);
+};
+
 function addActive(head) {
   $(head).addClass('header-active');
 }
@@ -77,6 +85,7 @@ $(function() {
     } else {
       previous();
     }
+    timer();
   });
 
   $('#next').click(function(e) {
@@ -86,10 +95,9 @@ $(function() {
     } else {
       next();
     }
+    timer();
   });
 
-  setInterval(function() {
-    $('#next').trigger('click');
-  }, 6000);
+  timer();
 
 });

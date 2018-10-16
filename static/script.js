@@ -7,17 +7,18 @@ function addActive(head) {
 
 function defineActive() {
   $('.header-active').removeClass('header-active');
-  switch (location.href.slice(location.href.indexOf('/', 8) + 1)) {
-    case 'about':
+  var aftslash = location.href.indexOf('/', 8);
+  switch (location.href.slice(aftslash + 1, aftslash + 5)) {
+    case 'abou':
       addActive('#about');
       break;
     case 'apps':
       addActive('#apps');
       break;
-    case 'blog/':
+    case 'blog':
       addActive('#blog');
       break;
-    case 'contact':
+    case 'cont':
       addActive('#contact');
       break;
     default:
